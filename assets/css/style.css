@@ -273,7 +273,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.single-about-img */
 .single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
 .single-about-img:before {
-    position:  absolute;
+    position:  center;
     content: " ";
     top: 0;
     left:  0;
@@ -292,8 +292,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 1282px;
-    height: 1920px;
+    width: 109%;
+    height: 90px;
     background: #1f2c6c;
 }
 /*.ab-list-icon */
