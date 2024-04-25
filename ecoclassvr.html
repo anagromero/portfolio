@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EcoClassVR - Research Project</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+            
+                <!-- Header Start -->
+                <div class="header" id="header">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h1>ECoClass-VR</h1>
+                        </div>
+                        <div align="justify">
+                            The goal of this project is the evaluation of the cognitive performance in classroom scenarios using audiovisual virtual reality.
+                            For this purpose, the suitability of the socalled "audiovisual scene analysis test paradigm" is investigated.
+                            To increase the realism of the experimental procedure and to compare two different visualization approaches, new 360&deg; videos and computer-generated imagery (CGI) models of classrooms were created.
+                            As a research assistant, I was responsible for the design and implementation of both Immersive Virtual Environments (IVEs) in Unity.
+                            <br>  <br>
+
+                            <span><u><h3>Project characteristics</u>:</h3></span>
+                            <ul>
+                                <li><b>Title</b>: Evaluating cognitive performance in classroom scenarios using audiovisual virtual reality" (ECoClass-VR)</li>
+                                <li><b>Team</b>: 10 people</li>
+                                <li><b>Duration</b>: January 2021 - December 2023</li>
+                                <li><b>Project partners</b>: TU Ilmenau, RWTH Aachen and TU Kaiserslauten</li>
+                                <li><b>Related papers</b>:</li>
+                                <p>
+                                    <small>
+                                        <ul>
+                                            <li><a href="ecoclassvr/DAGA2021_EcoClass-VR.pdf">Generation of audiovisual immersive virtual environments to evaluate cognitive performance in classroom type scenarios></li></a>
+                                            <li><a href="ecoclassvr/QoMex2024_EcoClass-VR.pdf">AVT-ECoClass-VR: An open-source audiovisual 360&deg; video and immersive CGI multi-talker dataset to evaluate cognitive performance></li></a>
+                                        </ul>
+                                </p></small>
+                                <li><b>GitHub repository</b>: <a href="https://github.com/Telecommunication-Telemedia-Assessment/AVT-ECoClass-VR?tab=readme-ov-file">AVT-ECoClass-VR</li></a>
+
+                            </ul>
+
+                            My tasks in each case were the following: <br><br>
+
+
+                            <span style="font-size:larger;"><u>360&deg; video-based IVE</u>:</span>
+                            <br>
+
+                            <ul>
+                                <li>Unity setup: XR Interaction Toolkit</li>
+
+                                <li>Scene input: final videos rendered for each subject using FFmpeg</li>
+                                <li>Speaker-to-story mapping: JSON files generated with a Python script</li>
+                                <li>Story-to-speaker mapping input system: interaction via graphical user interface (UI) operated with an HTC Vive controller.
+                            </ul>
+
+                            Video 1 shows an example of the scene:<br><br>
+
+                            <div class="video-container">
+                                <div><img src="ecoclassvr/360_example_scene_image.jpg" width="550" height="305"> <p class="title" style="font-size: 16px;">Equirectangular still image of one 360&deg; video</p></div>
+                               
+                                <div class="video">
+                                    <iframe width="550" height="305" src="https://www.youtube.com/embed/cMoWzS01Ujc?si=KH4kgaG37N3nzhPA" 
+                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                        </iframe><p class="title" style="font-size: 16px;">Video 1: 360&deg; demo scene</p>
+                                </div>
+
+                            </div>
+
+                            <span style="font-size:larger;"><u>CGI IVE</u>:</span>
+                            <br>
+
+                            <ul>
+                                <li>Unity setup: XR Interaction Toolkit</li>
+                                <li>Avatars: Postprocessing of the 20 3D scans of the speakers using Artec Studio 16</li>
+                                <li>Rigging phase: using Adobe Mixamo and Blender</li>
+                                <li>Design of the 3D model of the classroom: using SketchUp Make 2017 to facilitate the future integration of the classroom scene into the Room Acoustics for Virtual ENvironments (RAVEN) room acoustic simulation environment software</li>
+                                <li>Speaker-to-story mapping: JSON files generated with a Python script</li>
+                                <li>Story-to-speaker mapping input system: interaction via graphical user interface (UI) operated with an HTC Vive controller.
+                            </ul>
+                            Video 2 shows an example of the scene:<br><br>
+
+
+                            <div class="video-container">
+                                <div><img src="ecoclassvr/cgi_example.jpg" width="550" height="305"> <p class="title" style="font-size: 16px;">Viewport of the CGI scene</p></div>
+
+                                <div class="video">
+                                    <iframe width="550" height="305" src="https://www.youtube.com/embed/fjZ8s0aZKZA?si=zocwbIF27FuCENjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="title" style="font-size: 16px;">Video 2: CGI demo scene</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header End -->
+                
+                <!-- Large Button Start -->
+                <div class="large-btn">
+                    <div class="content-inner">
+                        <a class="btn large-btn" href="index.html">
+                            <span>&#171;</span> Back to main page
+                        </a>
+                    </div>
+                </div>
+                <!-- Large Button End -->
+                
+                
+                
+                <!-- Footer Start -->
+                <div class="footer">
+                    <div class="content-inner">
+                        <div class="row align-items-center">
+                   
+                                <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a></p>
+                 
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Media Project - Research Project</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+            
+                <!-- Header Start -->
+                <div class="header" id="header">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h1>Media Project</h1>
+                        </div>
+                        <div align="justify">
+                            In recent years, several advances in virtual, augmented and mixed reality (VR/AR/MR) have been made leading to new communication possibilities. 
+                            After the latest advances in the field of extended reality (XR): the combination of virtual, augmented and mixed reality, 
+                            these technologies are an important topic in research. 
+                            Therefore, the creation of high quality 3D avatars for a more realistic experience is getting more relevance. 
+                            Existing approaches like AvatarMe are able to reconstruct photo realistic 3D faces from a single image with an increasing level of detail. 
+                            However this is not enough to get a complete digital representation of a person.
+                            <br> <br>
+                            The main goal of this media project is to establish a four-phase process for developing 2-3 high-quality 3D avatars with the purpose of using them for XR research. 
+                            The process commences with the scanning and recording of individuals to generate full-body 3D models of them. 
+                            Subsequently, a rigging process is initiated, which involves creating a skeletal animation for the digital models to enable precise control of their movements. 
+                            Following rigging, a lip sync method is implemented, ensuring that the avatar's lip movements align accurately with spoken words, employing an audio stimulus as input. 
+                            <br>  <br>
+
+                            <span><u><h3>Project characteristics</u>:</h3></span>
+                            <ul>
+                                <li><b>Title</b>: Development of a machine learning supported pipeline to create high-quality 3D avatars for AR/VR/MR research</li>
+                                <li><b>Team</b>: 2 people</li>
+                                <li><b>Duration</b>: March 2022 - September 2022</li>
+                                <li><b>Project partner</b>: TU Ilmenau</li>
+                            </ul>
+
+
+                            <span><u><h3>Implementation</u></h3></span>
+
+                            <span style="font-size:larger;"><b>Scanning process</b>:</span>
+                            <br>
+                            Three methods were used to capture 3D scans to create our avatars, namely <a href="https://www.artec3d.com/portable-3d-scanners/artec-leo">Artec Leo 3D scanner</a>, 
+                            PolyCam app and <a href="https://github.com/alicevision/Meshroom">Meshroom</a>. After analizing the quality of scan data acquired from the different approaches
+                            mentioned before, we decided to use the scans created by the Artec Leo 3D scanner to scan the subjects
+                            for this project owing to the superior quality of scans in terms of mesh and texture quality.
+                            <br><br>
+
+                            <div style="text-align: center;">
+
+                                <div>
+                                    <img src="mediaproject/ArtecScan.jpg" width="400"><br>
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;"> Artec's post-processing result of the 3D scan</p>
+                                </div>
+                            </div>
+
+                            
+                            The process can be described as follows:
+
+                            <ul>
+                                <li>Scanning and obtaining a full 360&deg; view of the subject with the 3D scanner</li>
+                                <li>Transfer data to Artec Studio 16</li>
+                                    <ul>
+                                        <li>Apply Global registration by geometry to align all frames</li>
+                                        <li>Remove noise to get rid of outliers and noise</li>
+                                        <li>Sharp fusion of the meshes</li>
+                                        <li>Remove irrelevant data and inconsistencies</li>
+                                        <li>Apply fast simplification to simplify the mesh</li>
+                                        <li>Apply textures and perform adjustments if needed</li>
+                                        <li>Export the 3D model as an OBJ file</li>
+                                    </ul>
+                            </ul>
+
+
+                            
+                            <br>
+                            <span style="font-size:larger;"><b>Rigging of the 3D models</b>:</span>
+                            <br>
+
+                            The rigging process of a 3D model involves creating a 
+                            digital skeleton, known as a rig, that enables animators to control the movement 
+                            and deformation of characters, creatures, and other 3D objects.
+                            <br><br>
+                            In this stage of the project, we tested four rigging technologies: Adobe Mixamo, Blender, Autodesk Maya and the combination 
+                            of R3DS Wrap and DAZ Studio. The fact of working with a high resolution mesh as the one achieved after post-processing within Artec Studio
+                            makes it complicated to further apply rigging technologies to the model, as it consists of millions of polygons normally containing noise,
+                            artifacts and missing parts.
+                            <br><br>
+                            Wrapping is the process of turning a 3D scan into an animated character after converting it into a 
+                            low-poly mesh with a user or animation-friendly topology as shown in the following picture:
+                            <br><br>
+
+                            <div style="text-align: center;">
+
+                                <div>
+                                    <img src="mediaproject/Mesh_Comparison.jpg" width="400"><br>
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;"> Mesh comparison: Scan vs. R3DS wrap</p>
+                                </div>
+                            </div>
+
+                            This process was done using a wrapping software called R3DS Wrap, which allows wrapping a base figure around the body scan to finally
+                            export a normalized version of the mesh. To do this, correspoding points are added in exactly the same order for the software to know, which
+                            body parts correspond to each other: <br><br>
+
+                            <div style="text-align: center;">
+
+                                <div>
+                                    <img src="mediaproject/PointPairs.jpg" width="400"><br>
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;"> Point correspondence: Base figure vs. 3D Scan</p>
+                                </div>
+                            </div>
+
+                            Once the desired result is achieved, the geometry can be finally exported as an OBJ file to further add the rig inside DAZ Studio.
+                            This includes not only the skeleton, but it turns it operational with several accessories, such as clothing, hair, poses or animations:
+
+
+                            <div style="text-align: center;">
+
+                                <div>
+                                    <img src="mediaproject/DAZ_Rig.jpg" width="300"><br>
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;"> DAZ Rig</p>
+                                </div>
+                            </div>
+
+
+                            <ul>
+                                <li>UI Game Menu with Poke Animation</li>
+                                <li>Beerpong Game in the scene</li>
+                                <li>Unity setup:</li>
+                                    <ul>
+                                        <li> XR Interaction Toolkit</li>
+                                        <li> Shader Graph</li>
+                                        <li> Universal Render Pipeline (URP)</li>
+                                        <li>Navigation: Continuous movement (Touchpad), Teleportation (Trigger-Button) or natural movement </li>
+                                    </ul>
+                            </ul>
+
+                            
+                            <br>
+                            <span style="font-size:larger;"><b>Lip sync technologies</b>:</span>
+                            <br>
+                            Lip syncing in animation refers to the art of synchronization of audio dialogue to the movement 
+                            of the lips. During the course of this project, four lip sync technologies were employed.
+                            <br><br>
+
+                            <ul>
+                                <li>VOCA</li>
+                                    <ul>
+                                        <li><a href="https://voca.is.tue.mpg.de/">Voice Operated Character Animation</a></li>
+                                        <li>Deep Learning model</li>
+                                        <li>Faces Learned with an Articulated Model and Expresions (FLAME)</li>
+                                        <li>Trained from the heads of more than 4000 people</li>
+                                        <li>It only works with a 3D model of a head
+                                    </ul>
+                                <li>ThreeLS</li>
+                                    <ul>
+                                        <li>Simple live speech driven lip sync available as a Unity package</li>
+                                        <li>Three blend shapes: kiss, lips closed and mouth open</li>
+                                        <li>Calculation of differences between the spectrum of vowels and consonants of the input audio file</li>
+                                    </ul>
+                                <li>Unity Rhubarb Lip Syncer</li>
+                                    <ul>
+                                        <li>Unity Editor script</li>
+                                        <li>List of Shape Keys following the Blender Rhubarb nomenclature</li>
+                                        <li>Possibility to add facial expressions, including blinking of the eye and eyebrow movements</li>
+                                    </ul>
+                                <li>Blender Rhubarb Lip Sync</li>
+                                    <ul>
+                                        <li>Speech recognition</li>
+                                        <li>PocketSphinx: open source speech recognition system, that
+                                            recognizes the English dialogue accurately</li>
+                                        <li>Phonetic: recognizes the phonetics of the audio input focusing individual syllables</li>
+                                        <li>Most efficient and effective method because of its ability to create 3D animations based on the audio input</li>
+                                    </ul>
+                            </ul>
+
+                            <br>
+                            <span style="font-size:larger;"><b>Development of a Unity Demo Case</b>:</span>
+                            <br>
+
+                            As part of this media project, a small demo showcase had to be developed using Unity in order
+                            to compare the different approaches in terms of model quality. Furthermore, the virtual avatars
+                            should be respectively posed in the scene simulating to have a short dialog between each other. <br><br>
+
+                            <div style="text-align: center;">
+                                <div style="display: inline-block;">
+                                    <img src="mediaproject/DemoScene1.jpg" alt="Image 1" width="400">
+                                </div>
+
+                                <div style="display: inline-block;">
+                                    <img src="mediaproject/DemoScene2.jpg" alt="Image 2" width="400">
+                                </div>
+
+                                <p class="title" style="font-size: 16px; margin-top: 10px;">Demo scene in Unity</p>
+
+                            </div>
+
+                            </div>
+                        </div>
+                </div>
+                <!-- Header End -->
+                
+                <!-- Large Button Start -->
+                <div class="large-btn">
+                    <div class="content-inner">
+                        <a class="btn large-btn" href="index.html">
+                            <span>&#171;</span> Back to main page
+                        </a>
+                    </div>
+                </div>
+                <!-- Large Button End -->
+                
+                
+                
+                <!-- Footer Start -->
+                <div class="footer">
+                    <div class="content-inner">
+                        <div class="row align-items-center">
+                   
+                                <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a></p>
+                 
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

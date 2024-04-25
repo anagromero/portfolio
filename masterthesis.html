@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Master Thesis - Research Project</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+            
+                <!-- Header Start -->
+                <div class="header" id="header">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h1>Master Thesis</h1>
+                        </div>
+                        <div align="justify">
+                            In the field of virtual reality, there has been a growing interest in exploring Immersive Virtual Environments (IVEs) across various industries, 
+                            including gaming, education, healthcare, and training as they provide engaging and realistic experiences for users. 
+                            The realism of these environments is essential, as they offer a higher sense of presence and immersion, enabling users to interact with digital spaces 
+                            and objects in ways that mimic the real world. 
+                            It is believed that immersive virtual environments have potential benefits in improving spatial understanding and task performance.
+                            <br><br>
+                            The main goal of my master thesis consists in the investigation of different visualization approaches to visualize an interactable room
+                            in an Immersive Virtual Environment (IVE). This includes the implementation of three different
+                            visualization approaches as e.g. 360&deg; images, CGI modeling and 3D scanning of a single indoor scene.
+
+                            <br>  <br>
+
+                            <span><u><h3>Project characteristics</u>:</h3></span>
+                            <ul>
+                                <li><b>Title</b>: Development and Evaluation of different Visualization Approaches for interactable rooms in Immersive Virtual Environments</li>
+                                <li><b>Team</b>: 1 person (me)</li>
+                                <li><b>Duration</b>: March 2023 - October 2023</li>
+                                <li><b>Project partner</b>: TU Ilmenau</li>
+                            </ul>
+
+                            <br>
+                            <span><u><h3>Implementation</u></h3></span>
+
+                            <span style="font-size:larger;"><b>360&deg; environment</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>
+                                    Indoor recordings with the <a href="https://www.kandaovr.com/Obsidian-Pro">Kandao Obsidian Pro</a> camera from several positions to enable navigation and interaction possibilities
+                                    inside the virtual environment
+                                </li>
+                                <li>Unity setup:</li>
+                                    <ul>
+                                        <li> XR Interaction Toolkit</li>
+                                        <li> Shader Graph</li>
+                                        <li> Universal Render Pipeline (URP)</li>            
+                                    </ul>
+                                <li>Implementation of a teleportation system in Unity</li>
+                                <li>Interaction with the environment by using the controllers</li>
+                                <li>User Interface to switch between lighting conditions
+                            </ul>
+
+
+                            Video 1 shows an example of the scene:<br><br>
+
+                            <div class="video-container">
+                                <div><img src="masterthesis/Kandao_Pos1_LightON.jpg" width="550" height="305"> <p class="title" style="font-size: 14px; margin-top: 10px;">Equirectangular image of one 360&deg; shot</p></div>
+
+                                <div class="video">
+                                    <iframe width="550" height="305" src="https://www.youtube.com/embed/Zftde19sgOs?si=cGnSadpnv5CfAs8d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <p class="title" style="font-size: 14px; margin-top: 5px;">Video 1: 360&deg; scene</p>
+                                </div>
+
+                            </div>
+                            <br>
+                            <span style="font-size:larger;"><b>CGI IVE</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>Design of the 3D model of the room using SketchUp Make 2017</li>
+                                <li>Manual measurement and design of single elements of the room</li>
+                                <li>Application of textures</li>
+                            </ul>
+
+                            <div style="text-align: center;">
+                                <div style="display: inline-block;">
+                                    <img src="masterthesis/Cafe_CGI.jpg" alt="Image 1" width="400">
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;">CGI model of the location</p>
+                                </div>
+                                <div style="display: inline-block;">
+                                    <img src="masterthesis/RG_CGI.jpg" alt="Image 2" width="400">
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;">CGI model of the room</p>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li>UI Game Menu with Poke Animation</li>
+                                <li>Beerpong Game in the scene</li>
+                                <li>Unity setup:</li>
+                                    <ul>
+                                        <li> XR Interaction Toolkit</li>
+                                        <li> Shader Graph</li>
+                                        <li> Universal Render Pipeline (URP)</li>
+                                        <li> Navigation: Continuous movement (Touchpad), Teleportation (Trigger-Button) or natural movement </li>
+                                    </ul>
+                            </ul>
+
+                            Videos 2 and 3 show examples of the scene:<br><br>
+
+
+                            <div class="video-container">
+                                <div class="video">
+                                    <iframe width="505" height="284" src="https://www.youtube.com/embed/CMO4mpjlKlU?si=bMZYkHMqE-fbghr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="title" style="font-size: 14px; margin-top: 10px;">Video 2: CGI beerpong game</p>
+                                </div>
+
+                                <div class="video">
+                                    <iframe width="505" height="284" src="https://www.youtube.com/embed/b_XvQTvQekg?si=-8Opeir2b_bk-2jP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="title" style="font-size: 14px; margin-top: 10px;">Video 3: CGI scene</p>
+                                </div>
+                            </div>
+                            <br>
+                            <span style="font-size:larger;"><b>3D scan environment</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>3D scan of the room with the <a href="https://www.artec3d.com/portable-3d-scanners/artec-leo?gad_source=1&gclid=Cj0KCQjwlZixBhCoARIsAIC745CGj6H_7VP-REtow-Et_UELOA0xRKJHMjwh5M3_nlOw5dF1CgTXVwQaAjMSEALw_wcB&keyword=%2Bartec%20%2Bleo%20%2B3d%20%2Bscanner&utm_campaign=12711727109&utm_content=120980224455%7C%7C&utm_medium=cpc&utm_source=google&utm_term=%2Bartec%20%2Bleo%20%2B3d%20%2Bscanner%7C%7Ckwd-746714101190">Artec Leo 3D handheld scanner</a></li>
+                                <li>Postprocessing of more than 400 GB of data with Artec Studio 17</li>
+                            </ul>
+
+                            <div style="text-align: center;">
+
+                                <div>
+                                    <img src="masterthesis/ScanUnity.jpg" width="550">
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;">3D model of the room after postprocessing</p>
+                                </div>
+                            </div>
+
+
+                            <ul>
+                                <li>Interaction with the environment by using the controllers</li>
+                                <li>Unity setup:</li>
+                                    <ul>
+                                        <li> XR Interaction Toolkit</li>
+                                        <li> Shader Graph</li>
+                                        <li> Universal Render Pipeline (URP)</li>
+                                        <li> Occlusion Culling</li>
+                                        <li>Fast Approximate Anti-aliasing (FXAA)</li>
+                                        <li>Navigation: Continuous movement (Touchpad), Teleportation (Trigger-Button) or natural movement </li>
+                                    </ul>
+                            </ul>
+
+
+                                Video 4 shows an example of the scene:<br><br>
+
+                                <div class="video-container">
+
+                                    <div class="video">
+                                        <iframe width="550" height="305" src="https://www.youtube.com/embed/PDB5rPIpMdI?si=Gk_f8nlTMMbVPkRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <p class="title" style="font-size: 14px; margin-top: 10px;">Video 4: 3D scan scene</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- Header End -->
+                
+                <!-- Large Button Start -->
+                <div class="large-btn">
+                    <div class="content-inner">
+                        <a class="btn large-btn" href="index.html">
+                            <span>&#171;</span> Back to main page
+                        </a>
+                    </div>
+                </div>
+                <!-- Large Button End -->
+                
+                
+                
+                <!-- Footer Start -->
+                <div class="footer">
+                    <div class="content-inner">
+                        <div class="row align-items-center">
+                   
+                                <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a></p>
+                 
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
