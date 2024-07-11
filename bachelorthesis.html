@@ -1,0 +1,212 @@
+<<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bachelor Thesis - Research Project</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+            
+                <!-- Header Start -->
+                <div class="header" id="header">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h1>Bachelor Thesis</h1>
+                        </div>
+                        <div align="justify">
+                            The motivation for developing an adaptable immersive virtual environment (IVE) for VR teleconferencing is that current video conferencing applications are limited in several ways. 
+                            They only provide 2D views of remote participants on a flat screen in a small scale, which limits the sense of co-presence and the ability to naturally communicate with gaze, gestures, posture and other nonverbal cues.
+                            In contrast, VR technology enables creating a virtual meeting space where participants feel a true sense of co-presence as if they are together in the same physical space. 
+                            The properties of the virtual environment, such as room size, number of tables and chairs, are an important aspect of the conference experience.
+                            It is believed that immersive virtual environments have potential benefits in improving spatial understanding and task performance.
+                            <br><br>
+                            The project focuses on the creation of a prototype of an adaptable IVE that can be used for VR-based teleconferencing in Unity.
+                            
+
+                            <br>  <br>
+
+                            <span><u><h3>Project characteristics</u>:</h3></span>
+                            <ul>
+                                <li><b>Title</b>: Evaluation of immersive virtual environments and development of a prototype environment for virtual reality teleconferences</li>
+                                <li><b>Team</b>: 1 person (me)</li>
+                                <li><b>Duration</b>: September 2020 - February 2021</li>
+                                <li><b>Project partner</b>: TU Ilmenau</li>
+                            </ul>
+
+                            <br>
+                            <span><u><h3>Implementation</u></h3></span>
+
+                            The implementation of the adaptable immersive virtual environment (IVE) for VR teleconferencing involved the following key phases:<br>
+                            <br>
+                            <span style="font-size:larger;"><b>The Virtual Space</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>
+                                    The virtual space was designed and developed using the Unity and Blender.
+                                </li>
+                                <li>Key features included:</li>
+                                    <ul>
+                                        <li> Customizable room size, furniture, and lighting to match the user's physical environment</li>
+                                        <li> Ability to add and arrange virtual objects like tables, chairs, and the virtual whiteboard</li>
+                                    </ul>
+                                <li>Unity setup:</li>
+                                    <ul>
+                                        <li>OpenVR</li>
+                                        <li>XR Interaction Toolkit</li>
+                                        <li>Hand animations: Default, Grip & Pinch</li>
+                                        <li>Colliders</li>
+                                    </ul>
+
+                            </ul>
+
+
+                            Video 1 shows an example of the virtual teleconference room:<br><br>
+
+                            <div class="video-container">
+                                <div><img src="bachelorthesis/UI_MainMenu.jpg" width="550" height="305"> <p class="title" style="font-size: 14px; margin-top: 10px;">Graphical User Interface (GUI)</p></div>
+
+                                <div class="video">
+                                    <iframe width="550" height="305" src="https://www.youtube.com/embed/2Z1vb1HB16g?si=hF_bdB4KlC4DOnMG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <p class="title" style="font-size: 14px; margin-top: 5px;">Video 1: Virtual Teleconference Room</p>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <div style="display: flex; justify-content: space-between;"><div style="flex-grow: 1;"> 
+                                <span style="font-size:larger;"><b>Graphical User Interface (GUI)</b>:</span> <br> 
+                                <ul> 
+                                    <li>Menu bar on top of the virtual space for users to adjust the environment settings</li> 
+                                    <li>Interaction with the virtual objects was enabled through intuitive VR controller inputs</li> 
+                                    <li>A virtual whiteboard application was integrated, enabling collaborative content creation and editing</li> 
+                                </ul> 
+                            </div>
+
+                            <div style="display: flex; justify-content: flex-end;">
+                                <div style="text-align: center;">
+                                    <img src="bachelorthesis/Room_Canvas.jpg" style="width: 300px;">
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;">User Interface (UI)</p>
+                                </div>
+                            </div> 
+                            
+                        </div>
+
+                            
+
+            
+
+
+                            <div style="display: flex; justify-content: space-between;"><div style="flex-grow: 1;"> 
+                                <span style="font-size:larger;"><b>Virtual Whiteboard</b>:</span> <br> 
+                                <ul> 
+                                    <li>The virtual whiteboard was set up with the ability to draw, erase, and save notes and sketches</li> 
+                                    <li>Specific methods were implemented to handle user interactions with the whiteboard</li> 
+                                    <li>Implementation of Raycasts</li> 
+                                </ul> 
+                            </div>
+
+                            <div style="display: flex; justify-content: flex-end;">
+                                <div style="text-align: center;">
+                                    <img src="bachelorthesis/WB1.jpg" style="width: 300px;">
+                                    <p class="title" style="font-size: 16px; margin-top: 10px;">Virtual Whiteboard</p>
+                                </div>
+                            </div> </div>
+
+
+                            <br>
+                            <span style="font-size:larger;"><b>VR Controller integration</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>The VR controllers were mapped to various functions, such as selecting, moving, and scaling objects</li>
+                                <li>The controller button mapping was designed to provide an intuitive user experience</li>
+                            </ul>
+
+
+                                
+
+                            <br>
+                            <span style="font-size:larger;"><b>Multiplayer functionality</b>:</span>
+                            <br>
+
+                            <ul>
+                                <li>Photon Realtime SDK for Unity</li>
+                                <li>This would allow multiple users in remote locations to join the same virtual conference room</li>
+                                <li>The virtual environment, including the room layout, furniture, and other objects, would be synchronized across all connected clients using Photon's networking APIs </li>
+                            </ul>
+
+                            <div class="video-container">
+                                <div><img src="bachelorthesis/Selection1.jpg" width="550" height="305"> <p class="title" style="font-size: 14px; margin-top: 10px;">Object Selection</p></div>
+
+                                <div class="video">
+                                    <iframe width="550" height="305" src="https://www.youtube.com/embed/FYS5xNGlouI?si=hZJFD_u73nsZC2_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <p class="title" style="font-size: 14px; margin-top: 5px;">Video 2: Virtual Teleconference Room - Demo</p>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+                <!-- Header End -->
+                
+                <!-- Large Button Start -->
+                <div class="large-btn">
+                    <div class="content-inner">
+                        <a class="btn large-btn" href="index.html">
+                            <span>&#171;</span> Back to main page
+                        </a>
+                    </div>
+                </div>
+                <!-- Large Button End -->
+                
+                
+                
+                <!-- Footer Start -->
+                <div class="footer">
+                    <div class="content-inner">
+                        <div class="row align-items-center">
+                   
+                                <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a></p>
+                 
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
